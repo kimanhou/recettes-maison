@@ -1,0 +1,13 @@
+@import './colors.scss';
+@import './sizes.scss';
+@import './fonts.scss';
+
+.App {
+    font-family: Playfair;
+    color: var(--color-charcoal);
+    background-color: var(--color-white);
+    a {
+        text-decoration: none;
+        color: var(--color-charcoal);
+    }
+}

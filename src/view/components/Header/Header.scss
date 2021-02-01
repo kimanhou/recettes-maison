@@ -1,0 +1,9 @@
+.header {
+    text-align: center;
+    >.header-recipes, >.header-by-maki {
+        font-size: var(--size-font-size-header);
+    }
+    >.header-by-maki {
+        font-size: var(--size-font-size-subtitle);
+    }
+}

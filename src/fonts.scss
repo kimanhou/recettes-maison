@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Playfair;
+    font-display: swap;
+    src: url('./fonts/PlayfairDisplay-VariableFont_wght.woff') format('woff'),
+         url('./fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: PlayfairSC;
+    font-display: swap;
+    src: url('./fonts/PlayfairDisplaySC-Regular.woff') format('woff'),
+         url('./fonts/PlayfairDisplaySC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: PlayfairSC;
+    font-display: swap;
+    font-style: bold;
+    src: url('./fonts/PlayfairDisplaySC-Bold.woff') format('woff'),
+         url('./fonts/PlayfairDisplaySC-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: PlayfairSC;
+    font-display: swap;
+    font-style: black;
+    src: url('./fonts/PlayfairDisplaySC-Black.woff') format('woff'),
+         url('./fonts/PlayfairDisplaySC-Black.ttf') format('truetype');
+}

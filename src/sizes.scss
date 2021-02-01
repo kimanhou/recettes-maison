@@ -1,0 +1,28 @@
+:root{
+
+    // FONT-SIZES
+    --size-font-size-header: 80px;
+    --size-font-size-subtitle: 60px;
+    --size-font-size-navigation: 18px;
+    --size-font-size-small: 12px;
+
+    // MARGINS
+    --size-main-margin: 70px;
+    --size-gutter: 20px;
+
+    // NAVIGATION
+    --size-navigation-height: 24px;
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        // FONT SIZES
+        --size-font-size-header: 40px;
+        --size-font-size-subtitle: 30px;
+        --size-font-size-small: 8px;
+
+        // MARGINS
+        --size-main-margin: 30px;
+        --size-gutter: 10px;
+    }
+}
