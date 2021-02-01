@@ -9,6 +9,7 @@ interface INavigationLinkProps {
     text : Text;
     to : string;
     linkIndex : number;
+    backgroundColor ?: string;
 }
 
 const NavigationLink : React.FC<INavigationLinkProps> = props => {
@@ -30,11 +31,17 @@ const NavigationLink : React.FC<INavigationLinkProps> = props => {
         }
     }
 
+    const backgroundColor = props.backgroundColor !== undefined ? props.backgroundColor : 'var(--color-charcoal)';
+
     return (
         <Link className={`navigation-link`} to={props.to} >
             <div className={`navigation-link-div`} ref={ref}>
                 {formatText(props.text)}
                 <ScreenDetector className={`screen-detector-navigation-link`} onActive={setAnimation} />
+            </div>
+            <div className={`navigation-link-underline`}>
+                <div className={`navigation-link-underline-half left`} style={{ backgroundColor: backgroundColor }}></div>
+                <div className={`navigation-link-underline-half right`} style={{ backgroundColor: backgroundColor }}></div>
             </div>
         </Link>
     );
