@@ -10,4 +10,17 @@
         text-decoration: none;
         color: var(--color-charcoal);
     }
+    .main-wrapper {
+        margin: 0 var(--size-main-margin);
+        max-width: var(--size-main-wrapper-max-width);
+    }
 }
+
+@media screen and (min-width: 1540px) {
+    .App {
+        .main-wrapper {
+            margin: 0 auto;
+        }
+    }
+}
+

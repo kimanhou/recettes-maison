@@ -1,21 +1,18 @@
-import React, { useContext, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Text from '../../../model/Text';
-import { LocalValueContext } from '../LocalisationContext/LocalContext';
 import ScreenDetector from '../ScreenDetector/screenDetector';
 import './NavigationLink.scss';
 
 interface INavigationLinkProps {
-    text : Text;
+    text : string;
     to : string;
     linkIndex : number;
     backgroundColor ?: string;
 }
 
 const NavigationLink : React.FC<INavigationLinkProps> = props => {
-    var localisation = useContext(LocalValueContext);
-    const formatText = (text : Text) => {
-        return text.getText(localisation).split('').map((t, index) => {
+    const formatText = (text : string) => {
+        return text.split('').map((t, index) => {
             const delay = index * 0.1 + 1 + props.linkIndex ;
             return <span className={`down ${index}`} >
                         {t}

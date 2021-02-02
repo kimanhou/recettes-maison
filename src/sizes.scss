@@ -9,6 +9,8 @@
     // MARGINS
     --size-main-margin: 70px;
     --size-gutter: 20px;
+    --size-margin-80: 80px;
+    --size-margin-60: 60px;
     --size-margin-30: 30px;
     --size-margin-20: 20px;
     --size-margin-10: 10px;
@@ -16,6 +18,9 @@
 
     // NAVIGATION
     --size-navigation-height: 24px;
+
+    // BLOG CATEGORIES
+    --size-blog-categories-max-width: 500px;
 }
 
 @media screen and (max-width: 600px) {
