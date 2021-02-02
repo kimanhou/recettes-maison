@@ -6,6 +6,7 @@ import Recipe from '../../../model/Recipe';
 import { useQueryParams } from '../../hooks/UseQueryParams';
 import FadeIn from '../FadeIn/FadeIn';
 import Header from '../Header/Header';
+import Navigation from '../Navigation/Navigation';
 import RecipePreview from '../RecipePreview/RecipePreview';
 import './AllRecipes.scss';
 import CategoryButton from './CategoryButton';
@@ -57,66 +58,6 @@ const AllRecipes : React.FC = props => {
         })
     }
 
-    // const formatColumn1 = (recipes : Recipe[]) => {
-    //     return recipes.map((t, index) => {
-    //         if (index % 3 === 0) {
-    //             return <FadeIn noDelay>
-    //                     <RecipePreview recipe={t} backgroundColor={'apricot'} />
-    //                 </FadeIn> ;
-    //         }
-    //         if (index % 3 === 1) {
-    //             return <FadeIn noDelay>
-    //                     <RecipePreview recipe={t} backgroundColor={'light-grey'} />
-    //                 </FadeIn> ;
-    //         }
-    //         if (index % 3 === 2) {
-    //             return <FadeIn noDelay>
-    //                     <RecipePreview recipe={t} backgroundColor={'grey'} />
-    //                 </FadeIn> ;
-    //         }
-    //     })
-    // }
-
-    // const formatColumn2 = (recipes : Recipe[]) => {
-    //     return recipes.map((t, index) => {
-    //         if (index % 3 === 0) {
-    //             return <FadeIn noDelay>
-    //                     <RecipePreview recipe={t} backgroundColor={'light-grey'} />
-    //                 </FadeIn> ;
-    //         }
-    //         if (index % 3 === 1) {
-    //             return <FadeIn noDelay>
-    //                     <RecipePreview recipe={t} backgroundColor={'grey'} />
-    //                 </FadeIn> ;
-    //         }
-    //         if (index % 3 === 2) {
-    //             return <FadeIn noDelay>
-    //                     <RecipePreview recipe={t} backgroundColor={'apricot'} />
-    //                 </FadeIn> ;
-    //         }
-    //     })
-    // }
-
-    // const formatColumn3 = (recipes : Recipe[]) => {
-    //     return recipes.map((t, index) => {
-    //         if (index % 3 === 0) {
-    //             return <FadeIn noDelay>
-    //                     <RecipePreview recipe={t} backgroundColor={'grey'} />
-    //                 </FadeIn> ;
-    //         }
-    //         if (index % 3 === 1) {
-    //             return <FadeIn noDelay>
-    //                     <RecipePreview recipe={t} backgroundColor={'apricot'} />
-    //                 </FadeIn> ;
-    //         }
-    //         if (index % 3 === 2) {
-    //             return <FadeIn noDelay>
-    //                     <RecipePreview recipe={t} backgroundColor={'light-grey'} />
-    //                 </FadeIn> ;
-    //         }
-    //     })
-    // }
-
     const [isInvisible, setIsInvisible] = useState(false);
     const isInvisibleClassname = isInvisible ? 'is-invisible' : '';
 
@@ -131,6 +72,7 @@ const AllRecipes : React.FC = props => {
     return (
         <div className={`all-recipes`}>
             <Header />
+            <Navigation />
             <div className={`main-wrapper`}>
                 <div className={`all-recipes-title`}>
                     Les recettes

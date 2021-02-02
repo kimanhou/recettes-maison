@@ -1,9 +1,16 @@
 .header {
     text-align: center;
-    >.header-recipes, >.header-by-maki {
+    position: relative;
+    background-repeat: repeat;
+    background-image: url(../../../images/header-background.jpg);
+    background-size: 70%;
+    padding-bottom: var(--size-margin-30);
+    >.header-recipes {
+        font-family: PlayfairSC;
         font-size: var(--size-font-size-header);
     }
     >.header-by-maki {
-        font-size: var(--size-font-size-subtitle);
+        font-size: 40px;
+        font-style: italic;
     }
 }

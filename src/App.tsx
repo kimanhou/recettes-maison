@@ -1,7 +1,9 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
+import About from './view/components/About/About';
 import AllRecipes from './view/components/AllRecipes/AllRecipes';
+import Contact from './view/components/Contact/Contact';
 import Home from './view/components/Home/Home';
 import ScrollToTop from './view/components/ScrollToTop/ScrollToTop';
 
@@ -12,10 +14,10 @@ const App : React.FunctionComponent = props => {
             <ScrollToTop />
             <Switch>
                 <Route exact path={["/about"]}>
-                    {/* <About /> */}
+                    <About />
                 </Route>
                 <Route exact path={["/contact"]}>
-                    {/* <Contact /> */}
+                    <Contact />
                 </Route>
                 <Route exact path={["/"]}>
                     <Home />
