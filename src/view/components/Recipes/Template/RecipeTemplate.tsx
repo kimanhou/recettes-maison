@@ -14,6 +14,7 @@ const RecipeTemplate : React.FC<IRecipeTemplateProps> = props => {
             <div className={`recipe-title`}>
                 {recipe.title}
             </div>
+            {props.children}
         </div>
     );
 }

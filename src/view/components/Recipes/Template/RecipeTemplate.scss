@@ -1,1 +1,24 @@
-.recipe-template {}
+.recipe-template {
+    line-height: 1.5;
+    >.main-wrapper {
+        .section-title {
+            font-family: PlayfairSC;
+            font-size: 2rem;
+            margin-bottom: var(--size-margin-10);
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+        }
+        .section-separator {
+            height: 2rem;
+        }
+        .step-title {
+            font-family: PlayfairSC;
+            font-size: 1.5rem;
+            margin-bottom: var(--size-margin-5);
+            color: var(--color-grey);
+        }
+        .step-separator {
+            height: 1.5rem;
+        }
+    }
+}

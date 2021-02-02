@@ -5,6 +5,7 @@ import About from './view/components/About/About';
 import AllRecipes from './view/components/AllRecipes/AllRecipes';
 import Contact from './view/components/Contact/Contact';
 import Home from './view/components/Home/Home';
+import RecipeRoot from './view/components/Recipes/RecipeRoot';
 import ScrollToTop from './view/components/ScrollToTop/ScrollToTop';
 
 const App : React.FunctionComponent = props => {
@@ -25,9 +26,9 @@ const App : React.FunctionComponent = props => {
                 <Route exact path={["/recipes/"]}>
                     <AllRecipes />
                 </Route>
-                {/* <Route path={["/recipes/:recipeId"]}>
-                    <PostRoot />
-                </Route> */}
+                <Route path={["/recipes/:recipeId"]}>
+                    <RecipeRoot />
+                </Route>
             </Switch>
         </HashRouter>
     </div>
