@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "./static/css/main.2cb5a8f0.chunk.css",
+    "main.js": "./static/js/main.4c158942.chunk.js",
+    "main.js.map": "./static/js/main.4c158942.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.51394193.js",
+    "runtime-main.js.map": "./static/js/runtime-main.51394193.js.map",
+    "static/js/2.7bb28897.chunk.js": "./static/js/2.7bb28897.chunk.js",
+    "static/js/2.7bb28897.chunk.js.map": "./static/js/2.7bb28897.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.2cb5a8f0.chunk.css.map": "./static/css/main.2cb5a8f0.chunk.css.map",
+    "static/js/2.7bb28897.chunk.js.LICENSE.txt": "./static/js/2.7bb28897.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "./static/media/PlayfairDisplaySC-Regular.8a172651.ttf",
+    "static/media/RecipeHeader.scss": "./static/media/header-background.b2be7315.jpg",
+    "static/media/hero-image.jpg": "./static/media/hero-image.85ae04f9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51394193.js",
+    "static/js/2.7bb28897.chunk.js",
+    "static/css/main.2cb5a8f0.chunk.css",
+    "static/js/main.4c158942.chunk.js"
+  ]
+}
