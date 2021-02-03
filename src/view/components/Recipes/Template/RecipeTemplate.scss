@@ -33,5 +33,26 @@
             font-size: bold;
             background-color: var(--color-apricot);
         }
+        .ingredients {
+            display: flex;
+            flex: row;
+            font-style: bold;
+            font-size: 1.2rem;
+            border: solid 1px var(--color-apricot);
+            border-radius: var(--size-margin-10);
+            padding: var(--size-margin-10);
+            >.ingredients-column {
+                margin-right: var(--size-margin-10);
+            }
+        }
+        a {
+            &:hover {
+                color: var(--color-apricot);
+            }
+        }
+        .flex-line {
+            display: flex;
+            flex-direction: row;
+        }
     }
 }
