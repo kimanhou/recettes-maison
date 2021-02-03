@@ -1,5 +1,6 @@
 import React from 'react';
 import Recipe from '../../../../model/Recipe';
+import RecipeHeader from './RecipeHeader/RecipeHeader';
 import './RecipeTemplate.scss';
 
 interface IRecipeTemplateProps {
@@ -11,9 +12,7 @@ const RecipeTemplate : React.FC<IRecipeTemplateProps> = props => {
 
     return (
         <div className={`recipe-template`}>
-            <div className={`recipe-title`}>
-                {recipe.title}
-            </div>
+            <RecipeHeader title={recipe.getTitle()} />
             {props.children}
         </div>
     );

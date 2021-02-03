@@ -1,33 +1,13 @@
 import React from 'react';
-import Category from '../../../model/Category';
-import './CategoryButton.scss';
+import './RecipeSectionTitle.scss';
 
-interface ICategoryButtonProps {
-    category : Category;
-    isSelected : boolean;
-    onClick : () => void;
+interface IRecipeSectionTitleProps {
+    title : string;
 }
 
-const CategoryButton : React.FC<ICategoryButtonProps> = props => {
-    const isSelectedClassName = props.isSelected ? 'is-selected' : '';
-
-    const getBackgroundColorClassname = () => {
-        if (props.category.equals(Category.HYGIENE)) {
-            return 'apricot';
-        }
-        else if (props.category.equals(Category.CLEANING)) {
-            return 'light-grey';
-        }
-        else if (props.category.equals(Category.ALL)) {
-            return 'charcoal';
-        }
-        else {
-            return 'grey';
-        }
-    }
-
+const RecipeSectionTitle : React.FC<IRecipeSectionTitleProps> = props => {
     return (
-        <div className={`category-button ${isSelectedClassName} ${getBackgroundColorClassname()}`} onClick={props.onClick}>
+        <div className={`recipe-section-title`}>
             <div className="abs-fill">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 168" width="550" height="168" preserveAspectRatio="none" style={{width: '100%', height: '100%', transform: 'translate3d(0px, 0px, 0px)'}}>
                     <defs>
@@ -46,9 +26,9 @@ const CategoryButton : React.FC<ICategoryButtonProps> = props => {
                     </g>
                 </svg>
             </div> 
-            <span className="category-button-description">{props.category.getDescription()}</span>
+            <span className="recipe-section-title-text">{props.title}</span>
         </div>
     );
 }
 
-export default CategoryButton;
+export default RecipeSectionTitle;

@@ -1,0 +1,29 @@
+.recipe-section-title {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    transition: color 0.4s, background-color 0.4s;
+    margin: 0 var(--size-margin-10);
+    padding: var(--size-margin-10);
+    color: var(--color-charcoal);
+    font-family: PlayFairSC;
+    font-size: 2rem;
+    margin: var(--size-margin-10) auto;
+    >.abs-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    >.category-button-description {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+    }
+    .path {
+        fill: transparent;
+        fill-opacity: 1;
+        stroke: var(--color-charcoal);
+    }
+}

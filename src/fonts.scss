@@ -27,3 +27,10 @@
     src: url('./fonts/PlayfairDisplaySC-Black.woff') format('woff'),
          url('./fonts/PlayfairDisplaySC-Black.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: BsSignature;
+    font-display: swap;
+    src: url('./fonts/Bs Signature Demo.woff') format('woff'),
+         url('./fonts/Bs Signature Demo.ttf') format('truetype');
+}

@@ -5,12 +5,12 @@
     background-image: url(../../../images/header-background.jpg);
     background-size: 70%;
     padding-bottom: var(--size-margin-30);
+    font-size: var(--size-font-size-header);
     >.header-recipes {
         font-family: PlayfairSC;
-        font-size: var(--size-font-size-header);
     }
     >.header-by-maki {
-        font-size: 40px;
-        font-style: italic;
+        font-family: BsSignature;
+        margin-top: calc(var(--size-margin-30) * (-1));
     }
 }

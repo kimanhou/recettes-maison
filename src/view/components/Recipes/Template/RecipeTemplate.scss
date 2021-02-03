@@ -9,7 +9,7 @@
             color: var(--color-white);
         }
         .section-separator {
-            height: 2rem;
+            height: 3rem;
         }
         .step-title {
             font-family: PlayfairSC;
@@ -19,6 +19,19 @@
         }
         .step-separator {
             height: 1.5rem;
+        }
+        .two-columns {
+            display: flex;
+            flex-direction: row;
+            margin: 0 calc(var(--size-margin-20) * (-1));
+            >.column {
+                flex: 1;
+                margin: 0 var(--size-margin-20);
+            }
+        }
+        .highlight {
+            font-size: bold;
+            background-color: var(--color-apricot);
         }
     }
 }
