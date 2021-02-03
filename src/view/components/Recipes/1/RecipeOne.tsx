@@ -1,4 +1,5 @@
 import React from 'react';
+import ListItem from '../Template/ListItem/ListItem';
 import RecipeImage from '../Template/RecipeImage/RecipeImage';
 import RecipeSectionTitle from '../Template/RecipeSectionTitle/RecipeSectionTitle';
 import RecipeTemplate from '../Template/RecipeTemplate';
@@ -42,7 +43,7 @@ const RecipeOne : React.FC = props => {
                             1g
                         </div>
                         <div className={`ingredients-column`}>
-                            Huile de coco désodorisée<br></br>
+                            Huile de coco désodorisée &#129381;<br></br>
                             Huile de sésame<br></br>
                             Lessive de soude à 30%<br></br>
                             Fragrance<br></br>
@@ -52,13 +53,15 @@ const RecipeOne : React.FC = props => {
                 </div>
                 <div className={`column`}>
                     <RecipeSectionTitle title='Le matériel' />
-                    Une boîte en carton ou moules en silicone
+                    <ListItem text={`Une boîte en carton ou moules en silicone 🥡`}/>
                     <br></br>
                     Une balance de cuisine
                     <br></br>
                     2-3 Eco cups selon le nombre de couleurs différentes
                     <br></br>
-                    Un grand saladier ou une carafe Une spatule pour râcler
+                    Un grand saladier ou une carafe
+                    <br></br>
+                    Une spatule pour râcler
                     <br></br>
                     Des batonnets pour touiller Des gants de ménage
                     <br></br>

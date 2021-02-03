@@ -4,7 +4,7 @@
     background-repeat: repeat;
     background-image: url(../../../images/header-background.jpg);
     background-size: 70%;
-    padding-bottom: var(--size-margin-30);
+    padding: var(--size-margin-30) 0;
     font-size: var(--size-font-size-header);
     >.header-recipes {
         font-family: PlayfairSC;
@@ -12,5 +12,14 @@
     >.header-by-maki {
         font-family: BsSignature;
         margin-top: calc(var(--size-margin-30) * (-1));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        padding: var(--size-margin-10) 0;
+        >.header-by-maki {
+            margin-top: calc(var(--size-margin-10) * (-1));
+        }
     }
 }

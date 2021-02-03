@@ -30,15 +30,15 @@ export default class Recipe {
     static getAllRecipes = () => {
         return [ 
             Recipe.ONE,
-            Recipe.TWO,
-            Recipe.THREE,
-            Recipe.TWO,
-            Recipe.ONE,
-            Recipe.THREE,
-            Recipe.ONE,
-            Recipe.THREE,
-            Recipe.THREE,
-            Recipe.ONE,
+            // Recipe.TWO,
+            // Recipe.THREE,
+            // Recipe.TWO,
+            // Recipe.ONE,
+            // Recipe.THREE,
+            // Recipe.ONE,
+            // Recipe.THREE,
+            // Recipe.THREE,
+            // Recipe.ONE,
          ];
     }
 
@@ -90,9 +90,9 @@ export default class Recipe {
     }
 
 
-    static ONE = new Recipe(1, new Date('2021-02-02'), 'Savon solide', RecipeOne, Category.HYGIENE);
-    static TWO = new Recipe(2, new Date('2021-02-09'), 'Lessive', RecipeOne, Category.CLEANING);
-    static THREE = new Recipe(3, new Date('2021-02-16'), 'Beurre de cacahuètes', RecipeOne, Category.FOOD);
+    static ONE = new Recipe(1, new Date('2021-02-03'), 'Savon solide', RecipeOne, Category.HYGIENE);
+    static TWO = new Recipe(2, new Date('2021-02-10'), 'Lessive', RecipeOne, Category.CLEANING);
+    static THREE = new Recipe(3, new Date('2021-02-17'), 'Beurre de cacahuètes', RecipeOne, Category.FOOD);
 }
 
 const months = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ];

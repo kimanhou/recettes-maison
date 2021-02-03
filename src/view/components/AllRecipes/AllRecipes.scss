@@ -16,6 +16,7 @@
                 max-width: var(--size-blog-categories-max-width);
                 margin: var(--size-margin-20) auto;
                 align-items: center;
+                flex-wrap: wrap;
             }
         }
         >.recipes {
@@ -44,9 +45,9 @@
 }
 
 @media screen and (max-width: 600px) {
-    .blog {
+    .all-recipes {
         >.main-wrapper {
-            >.posts {
+            >.recipes {
                 flex-direction: column;
             }
         }
