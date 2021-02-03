@@ -7,6 +7,16 @@ import './RecipeOne.scss';
 
 
 const RecipeOne : React.FC = props => {
+    // --color-white: rgb(251, 251, 251);
+    // --color-charcoal: rgb(54, 63, 73);
+    const calculateValueOfBackgroundColor = (from : number, to : number, distance : number, distanceTotale : number) => {
+        return from + (to - from) * (distance / distanceTotale);
+    }
+
+    const getBackgroundColor = (distance : number) => {
+        return `rgb(${calculateValueOfBackgroundColor(54, 251, distance, 9)}, ${calculateValueOfBackgroundColor(63, 251, distance, 9)}, ${calculateValueOfBackgroundColor(73, 251, distance, 9)})`;
+    }
+
 
     return (
         <RecipeTemplate recipeId={1} classname={`one`}>
@@ -53,21 +63,15 @@ const RecipeOne : React.FC = props => {
                 </div>
                 <div className={`column`}>
                     <RecipeSectionTitle title='Le matériel' />
-                    <ListItem text={`Une boîte en carton ou moules en silicone 🥡`}/>
-                    <br></br>
-                    Une balance de cuisine
-                    <br></br>
-                    2-3 Eco cups selon le nombre de couleurs différentes
-                    <br></br>
-                    Un grand saladier ou une carafe
-                    <br></br>
-                    Une spatule pour râcler
-                    <br></br>
-                    Des batonnets pour touiller Des gants de ménage
-                    <br></br>
-                    Une blouse
-                    <br></br>
-                    Des lunettes de protection
+                    <ListItem text={`Une boîte en carton ou moules en silicone 🥡`} dotColor={getBackgroundColor(1)}/>
+                    <ListItem text={`Une balance de cuisine`}dotColor={getBackgroundColor(2)} />
+                    <ListItem text={`2-3 Eco cups selon le nombre de couleurs différentes`}dotColor={getBackgroundColor(3)} />
+                    <ListItem text={`Un grand saladier ou une carafe`}dotColor={getBackgroundColor(4)} />
+                    <ListItem text={`Une spatule pour râcler`} dotColor={getBackgroundColor(5)} />
+                    <ListItem text={`Des bâtonnets pour touiller`} dotColor={getBackgroundColor(6)} />
+                    <ListItem text={`Des gants de ménage`} dotColor={getBackgroundColor(7)} />
+                    <ListItem text={`Une blouse`} dotColor={getBackgroundColor(8)} />
+                    <ListItem text={`Des lunettes de protection`} dotColor={getBackgroundColor(9)} />
                 </div>
             </div>
             
