@@ -7,6 +7,7 @@ interface INavigationLinkProps {
     text : string;
     to : string;
     linkIndex : number;
+    isSelected : boolean;
     backgroundColor ?: string;
 }
 
@@ -30,8 +31,10 @@ const NavigationLink : React.FC<INavigationLinkProps> = props => {
 
     const backgroundColor = props.backgroundColor !== undefined ? props.backgroundColor : 'var(--color-charcoal)';
 
+    const isSelectedClassname = props.isSelected ? 'is-selected' : '';
+
     return (
-        <Link className={`navigation-link`} to={props.to} >
+        <Link className={`navigation-link ${isSelectedClassname}`} to={props.to} >
             <div className={`navigation-link-div`} ref={ref}>
                 {formatText(props.text)}
                 <ScreenDetector className={`screen-detector-navigation-link`} onActive={setAnimation} />

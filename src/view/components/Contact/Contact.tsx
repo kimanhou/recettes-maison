@@ -7,7 +7,7 @@ const Contact : React.FC = props => {
     return (
         <div className={`contact`}>
             <Header />
-            <Navigation />
+            <Navigation  selectedPage='contact' />
             <div className={`main-wrapper`}>
                 <div className={`contact-title`}>
                     Contact

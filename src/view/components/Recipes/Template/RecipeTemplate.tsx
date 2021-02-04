@@ -17,7 +17,7 @@ const RecipeTemplate : React.FC<IRecipeTemplateProps> = props => {
     return (
         <div className={`recipe-template ${props.classname}`}>
             <RecipeHeader title={recipe.getTitle()} />
-            <Navigation />
+            <Navigation  selectedPage='recipes' />
             <div className={`main-wrapper`} id={`top`}>
                 <ArrowBack />
                 {props.children}

@@ -72,7 +72,7 @@ const AllRecipes : React.FC = props => {
     return (
         <div className={`all-recipes`}>
             <Header />
-            <Navigation />
+            <Navigation  selectedPage='recipes' />
             <div className={`main-wrapper`}>
                 <div className={`all-recipes-title`}>
                     Les recettes

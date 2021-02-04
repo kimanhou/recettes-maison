@@ -7,7 +7,7 @@ const About : React.FC = props => {
     return (
         <div className={`about`}>
             <Header />
-            <Navigation />
+            <Navigation  selectedPage='about' />
             <div className={`main-wrapper`}>
                 <div className={`about-title`}>
                     À propos

@@ -55,6 +55,13 @@
             width: 0;
         }
     }
+    &.is-selected {
+        >.navigation-link-underline {
+            >.navigation-link-underline-half {
+                animation: navigation-selected-animation 1s cubic-bezier(1,0,0,1) 4s forwards;
+            }
+        }
+    }
 }
 
 @keyframes section-navigation-down-animation {
@@ -63,5 +70,14 @@
     }
     100% {
         top: 0;
+    }
+}
+
+@keyframes navigation-selected-animation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: calc(50% + var(--size-margin-10));
     }
 }
