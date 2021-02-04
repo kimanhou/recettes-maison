@@ -29,10 +29,6 @@
                 margin: 0 var(--size-margin-20);
             }
         }
-        .highlight {
-            font-size: bold;
-            background-color: var(--color-apricot);
-        }
         .ingredients {
             display: flex;
             flex: row;
@@ -47,12 +43,16 @@
         }
         a {
             &:hover {
-                color: var(--color-apricot);
+                color: var(--color-grey);
             }
         }
         .flex-line {
             display: flex;
             flex-direction: row;
+        }
+        .uppercase {
+            text-transform: uppercase;
+            font-style: bold;
         }
     }
 }

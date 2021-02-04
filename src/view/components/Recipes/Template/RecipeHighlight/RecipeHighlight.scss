@@ -1,0 +1,23 @@
+.recipe-highlight {
+    position: relative;
+    display: inline-block;
+    font-size: bold;
+    >.recipe-highlight-background {
+        position: absolute;
+        top: 0;
+        right: -2px;
+        background-color: var(--color-apricot);
+        transition: width .8s;
+        height: 100%;
+        width: 0;
+    }
+    >.recipe-hightlight-content {
+        position: relative;
+        z-index: 1;
+    }
+    &.active {
+        >.recipe-highlight-background {
+            width: calc(100% + 4px);
+        }
+    }
+}

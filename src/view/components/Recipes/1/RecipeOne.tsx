@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ScreenDetector from '../../ScreenDetector/screenDetector';
 import ListItem from '../Template/ListItem/ListItem';
+import RecipeHighlight from '../Template/RecipeHighlight/RecipeHighlight';
 import RecipeImage from '../Template/RecipeImage/RecipeImage';
 import RecipeSectionTitle from '../Template/RecipeSectionTitle/RecipeSectionTitle';
 import RecipeTemplate from '../Template/RecipeTemplate';
@@ -17,23 +19,31 @@ const RecipeOne : React.FC = props => {
         return `rgb(${calculateValueOfBackgroundColor(54, 251, distance, 9)}, ${calculateValueOfBackgroundColor(63, 251, distance, 9)}, ${calculateValueOfBackgroundColor(73, 251, distance, 9)})`;
     }
 
+    const [materielActive, setMaterielActive] = useState(false);
+    const materielOnActive = () => {
+        setMaterielActive(true);
+    }
+
+    const materielOnUnactive = () => {
+        setMaterielActive(false);
+    }
 
     return (
         <RecipeTemplate recipeId={1} classname={`one`}>
             <RecipeSectionTitle title='En résumé' />
             Le savon est le produit d’une réaction chimique entre une base forte et une matière grasse.
-            Les deux éléments principaux ici sont donc <span className={`highlight`}>la lessive de soude</span> et deux huiles: <span className={`highlight`}>l’huile de coco</span> pour le côté moussant et <span className={`highlight`}>l’huile de sésame</span> pour le gras. 
-            On y ajoute une <span className={`highlight`}>fragrance de synthèse</span> à la fois pour l’odeur et comme catalyseur. Celle-ci va en effet accélérer la réaction chimique et donc le durcissement du produit et ainsi raccourcir le temps de séchage entre deux couches.
+            Les deux éléments principaux ici sont donc <RecipeHighlight>la lessive de soude</RecipeHighlight> et deux huiles: <RecipeHighlight>l’huile de coco</RecipeHighlight> pour le côté moussant et <RecipeHighlight>l’huile de sésame</RecipeHighlight> pour le gras. 
+            On y ajoute une <RecipeHighlight>fragrance de synthèse</RecipeHighlight> à la fois pour l’odeur et comme catalyseur. Celle-ci va en effet accélérer la réaction chimique et donc le durcissement du produit et ainsi raccourcir le temps de séchage entre deux couches.
             
-            La préparation prend environ 1h, selon la complexité du motif que l’on souhaite réaliser, et s’effectue à <span className={`highlight`}>température ambiante</span>. Ensuite, il faudra attendre environ <span className={`highlight`}>un mois</span> avant de pouvoir utiliser le produit final.
+            La préparation prend environ 1h, selon la complexité du motif que l’on souhaite réaliser, et s’effectue à <RecipeHighlight>température ambiante</RecipeHighlight>. Ensuite, il faudra attendre environ <RecipeHighlight>un mois</RecipeHighlight> avant de pouvoir utiliser le produit final.
             
             <div className={`section-separator`}></div>
             
             <RecipeSectionTitle title='La saponification à froid' />
-            La soude attaque le gras contenu dans l’huile. C’est une <span className={`highlight`}>réaction totale</span> mais assez <span className={`highlight`}>lente à température ambiante</span>, 
+            La soude attaque le gras contenu dans l’huile. C’est une <RecipeHighlight>réaction totale</RecipeHighlight> mais assez <RecipeHighlight>lente à température ambiante</RecipeHighlight>, 
             d’où le temps de séchage de 4 semaines. Il faut donc que l’huile soit en excès par rapport à la soude. 
             De plus, les huiles utilisées contiennent des éléments, dits insaponifiables, qui ne réagissent pas avec la soude et qui resteront sous forme d’huile dans le produit final. 
-            On obtiendra donc un <span className={`highlight`}>savon surgras</span>.
+            On obtiendra donc un <RecipeHighlight>savon surgras</RecipeHighlight>.
 
             <div className={`section-separator`}></div>
             
@@ -63,15 +73,16 @@ const RecipeOne : React.FC = props => {
                 </div>
                 <div className={`column`}>
                     <RecipeSectionTitle title='Le matériel' />
-                    <ListItem text={`Une boîte en carton ou moules en silicone 🥡`} dotColor={getBackgroundColor(1)}/>
-                    <ListItem text={`Une balance de cuisine`}dotColor={getBackgroundColor(2)} />
-                    <ListItem text={`2-3 Eco cups selon le nombre de couleurs différentes`}dotColor={getBackgroundColor(3)} />
-                    <ListItem text={`Un grand saladier ou une carafe`}dotColor={getBackgroundColor(4)} />
-                    <ListItem text={`Une spatule pour râcler`} dotColor={getBackgroundColor(5)} />
-                    <ListItem text={`Des bâtonnets pour touiller`} dotColor={getBackgroundColor(6)} />
-                    <ListItem text={`Des gants de ménage`} dotColor={getBackgroundColor(7)} />
-                    <ListItem text={`Une blouse`} dotColor={getBackgroundColor(8)} />
-                    <ListItem text={`Des lunettes de protection`} dotColor={getBackgroundColor(9)} />
+                    <ScreenDetector className={`screen-detector-materiel`} onActive={materielOnActive} onUnactive={materielOnUnactive} />
+                    <ListItem text={`Une boîte en carton ou moules en silicone 🥡`} dotColor={getBackgroundColor(1)} active={materielActive}/>
+                    <ListItem text={`Une balance de cuisine`}dotColor={getBackgroundColor(2)} active={materielActive} activeDelay={`0.2s`}/>
+                    <ListItem text={`2-3 Eco cups selon le nombre de couleurs différentes`}dotColor={getBackgroundColor(3)} active={materielActive} activeDelay={`0.4s`}/>
+                    <ListItem text={`Un grand saladier ou une carafe`}dotColor={getBackgroundColor(4)} active={materielActive} activeDelay={`0.6s`}/>
+                    <ListItem text={`Une spatule pour râcler`} dotColor={getBackgroundColor(5)} active={materielActive} activeDelay={`0.8s`}/>
+                    <ListItem text={`Des bâtonnets pour touiller`} dotColor={getBackgroundColor(6)} active={materielActive} activeDelay={`1s`}/>
+                    <ListItem text={`Des gants de ménage`} dotColor={getBackgroundColor(7)} active={materielActive} activeDelay={`1.2s`}/>
+                    <ListItem text={`Une blouse`} dotColor={getBackgroundColor(8)} active={materielActive} activeDelay={`1.4s`}/>
+                    <ListItem text={`Des lunettes de protection`} dotColor={getBackgroundColor(9)} active={materielActive} activeDelay={`1.6s`}/>
                 </div>
             </div>
             
@@ -113,11 +124,11 @@ const RecipeOne : React.FC = props => {
             <div className={`section-separator`}></div>
             
             <RecipeSectionTitle title='Des motifs' />
-            Le monochrome : une seule couleur, une seule couche.<br></br>
-            Le marbré : mélange de deux couleurs, les deux couches sont versées simultanément dans la boîte.<br></br>
-            Les rayures : superposition des couches.<br></br>
-            La diagonale : on verse la première couche dans une boîte préalablement penchée. Une fois sèche, on penche la boîte dans l'autre sens et on verse la seconde couche.<br></br>
-            La double diagonale : on verse la première couche (la moitié de la préparation) dans une boîte préalablement penchée. Une fois sèche, on penche la boîte dans l'autre sens et on verse la seconde couche (la moitié de ce qu'il reste de la préparation). On remet la boîte droite pour la dernière couche.
+            <span className={`uppercase`}>Le monochrome</span> : une seule couleur, une seule couche.<br></br><br></br>
+            <span className={`uppercase`}>Le marbré</span> : mélange de deux couleurs, les deux couches sont versées simultanément dans la boîte.<br></br><br></br>
+            <span className={`uppercase`}>Les rayures</span> : superposition des couches.<br></br><br></br>
+            <span className={`uppercase`}>La diagonale</span> : on verse la première couche dans une boîte préalablement penchée. Une fois sèche, on penche la boîte dans l'autre sens et on verse la seconde couche.<br></br><br></br>
+            <span className={`uppercase`}>La double diagonale</span> : on verse la première couche (la moitié de la préparation) dans une boîte préalablement penchée. Une fois sèche, on penche la boîte dans l'autre sens et on verse la seconde couche (la moitié de ce qu'il reste de la préparation). On remet la boîte droite pour la dernière couche.
            
             <div className={`flex-line motifs-container`}>
                 <RecipeImage imageUrl={'https://www.instagram.com/p/CJswhmhFBjh/'} title={`Le monochrome`} text={`@ciment.paris`} />
@@ -130,11 +141,11 @@ const RecipeOne : React.FC = props => {
             <div className={`section-separator`}></div>
 
             <RecipeSectionTitle title='Des liens utiles' />
-            <a href='https://www.ciment.paris/' target='_blank'>Savonnerie Ciment</a> : ateliers, vente de produits finis et de matières premières
-            <br></br>
-            <a href='https://calc.mendrulandia.es/' target='_blank'>Mendrulandia</a> : calculateur de quantités 
-            <br></br>
-            <a href='https://www.aroma-zone.com/info/fiche-savoir-faire/la-saponification-a-froid' target='_blank'>Aroma zone</a> : explications détaillées de la saponification à froid, vente de fragrance de synthèse
+            <a href='https://www.ciment.paris/' target='_blank'><RecipeHighlight>Savonnerie Ciment</RecipeHighlight></a> : ateliers, vente de produits finis et de matières premières
+            <br></br><br></br>
+            <a href='https://calc.mendrulandia.es/' target='_blank'><RecipeHighlight>Mendrulandia</RecipeHighlight></a> : calculateur de quantités 
+            <br></br><br></br>
+            <a href='https://www.aroma-zone.com/info/fiche-savoir-faire/la-saponification-a-froid' target='_blank'><RecipeHighlight>Aroma zone</RecipeHighlight></a> : explications détaillées de la saponification à froid, vente de fragrance de synthèse
 
             <div className={`section-separator`}></div>
             

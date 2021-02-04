@@ -1,5 +1,6 @@
 import React from 'react';
 import Recipe from '../../../../model/Recipe';
+import Navigation from '../../Navigation/Navigation';
 import ArrowBack from './ArrowBack/ArrowBack';
 import ArrowUp from './ArrowUp/ArrowUp';
 import RecipeHeader from './RecipeHeader/RecipeHeader';
@@ -16,6 +17,7 @@ const RecipeTemplate : React.FC<IRecipeTemplateProps> = props => {
     return (
         <div className={`recipe-template ${props.classname}`}>
             <RecipeHeader title={recipe.getTitle()} />
+            <Navigation />
             <div className={`main-wrapper`} id={`top`}>
                 <ArrowBack />
                 {props.children}
