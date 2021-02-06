@@ -11,6 +11,16 @@ interface IRecipeTemplateProps {
     classname : string;
 }
 
+// --color-white: rgb(251, 251, 251);
+// --color-charcoal: rgb(54, 63, 73);
+export const calculateValueOfBackgroundColor = (from : number, to : number, distance : number, distanceTotale : number) => {
+    return from + (to - from) * (distance / distanceTotale);
+}
+
+export const getBackgroundColor = (distance : number, distanceTotale : number) => {
+    return `rgb(${calculateValueOfBackgroundColor(54, 251, distance, distanceTotale)}, ${calculateValueOfBackgroundColor(63, 251, distance, distanceTotale)}, ${calculateValueOfBackgroundColor(73, 251, distance, distanceTotale)})`;
+}
+
 const RecipeTemplate : React.FC<IRecipeTemplateProps> = props => {
     const recipe = Recipe.getRecipeById(props.recipeId);
 

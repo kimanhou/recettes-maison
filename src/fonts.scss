@@ -6,6 +6,14 @@
 }
 
 @font-face {
+    font-family: Playfair;
+    font-display: swap;
+    font-style: bold;
+    src: url('./fonts/PlayfairDisplay-Bold.woff') format('woff'),
+         url('./fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+}
+
+@font-face {
     font-family: PlayfairSC;
     font-display: swap;
     src: url('./fonts/PlayfairDisplaySC-Regular.woff') format('woff'),
