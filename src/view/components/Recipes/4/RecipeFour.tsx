@@ -36,7 +36,7 @@ const RecipeFour : React.FC = props => {
                             5g
                         </div>
                         <div className={`ingredients-column`}>
-                            Cacahuètes grillées non salées <br></br>
+                            Cacahuètes grillées non salées 🥜<br></br>
                             Sel<br></br>
                             Sucre
                         </div>
