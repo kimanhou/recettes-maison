@@ -13,7 +13,7 @@ interface IRecipeTemplateProps {
 
 // --color-white: rgb(251, 251, 251);
 // --color-charcoal: rgb(54, 63, 73);
-export const calculateValueOfBackgroundColor = (from : number, to : number, distance : number, distanceTotale : number) => {
+const calculateValueOfBackgroundColor = (from : number, to : number, distance : number, distanceTotale : number) => {
     return from + (to - from) * (distance / distanceTotale);
 }
 
