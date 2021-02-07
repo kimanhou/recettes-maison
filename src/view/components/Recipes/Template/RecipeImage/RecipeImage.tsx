@@ -8,21 +8,9 @@ interface IRecipeImageProps {
 }
 
 const RecipeImage : React.FC<IRecipeImageProps> = props => {
-    const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
-    useEffect(() => {
-        fetch(`https://graph.facebook.com/v9.0/instagram_oembed?url=${props.imageUrl}&access_token=857325501713225|f2b27b7ab1af66fad966fe773ffcaaf3`)
-            .then(resp => {
-                if (resp.ok){
-                    return resp.json();
-                }
-                throw new Error(resp.statusText);
-            })
-            .then(json => json["thumbnail_url"])
-            .then(setThumbnailUrl)
-    }, []);
 
     return (
-        <div className={`recipe-image`} style={{ backgroundImage: `url('${thumbnailUrl}')` }}>
+        <div className={`recipe-image`} style={{ backgroundImage: `url('${props.imageUrl}')` }}>
             <a href={props.imageUrl} target='_blank'>
                 <div className={`hover-shadow`}></div>
                 <div className={`recipe-image-content`}>

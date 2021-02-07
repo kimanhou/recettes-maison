@@ -49,6 +49,11 @@
             display: flex;
             flex-direction: row;
         }
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .uppercase {
             text-transform: uppercase;
             font-style: bold;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ScreenDetector from '../../ScreenDetector/screenDetector';
 import ListItem from '../Template/ListItem/ListItem';
 import RecipeHighlight from '../Template/RecipeHighlight/RecipeHighlight';
-import RecipeImage from '../Template/RecipeImage/RecipeImage';
+import RecipeImageInsta from '../Template/RecipeImageInsta/RecipeImageInsta';
 import RecipeSectionTitle from '../Template/RecipeSectionTitle/RecipeSectionTitle';
 import RecipeTemplate, { getBackgroundColor } from '../Template/RecipeTemplate';
 import './RecipeOne.scss';
@@ -122,10 +122,10 @@ const RecipeOne : React.FC = props => {
             <span className={`uppercase`}>La double diagonale</span> : on verse la première couche (la moitié de la préparation) dans une boîte préalablement penchée. Une fois sèche, on penche la boîte dans l'autre sens et on verse la seconde couche (la moitié de ce qu'il reste de la préparation). On remet la boîte droite pour la dernière couche.
            
             <div className={`flex-line motifs-container`}>
-                <RecipeImage imageUrl={'https://www.instagram.com/p/CJswhmhFBjh/'} title={`Le monochrome`} text={`@ciment.paris`} />
-                <RecipeImage imageUrl={'https://www.instagram.com/p/CJqNC1xgQHK/'} title={`Les rayures`} text={`@ciment.paris`} />
-                <RecipeImage imageUrl={'https://www.instagram.com/p/B9W5PPZqNYI/'} title={`La diagonale`} text={`@ciment.paris`} />
-                <RecipeImage imageUrl={'https://www.instagram.com/p/Bkhc5b5AmvH/'} title={`La double diagonale`} text={`@ciment.paris`} />
+                <RecipeImageInsta imageUrl={'https://www.instagram.com/p/CJswhmhFBjh/'} title={`Le monochrome`} text={`@ciment.paris`} />
+                <RecipeImageInsta imageUrl={'https://www.instagram.com/p/CJqNC1xgQHK/'} title={`Les rayures`} text={`@ciment.paris`} />
+                <RecipeImageInsta imageUrl={'https://www.instagram.com/p/B9W5PPZqNYI/'} title={`La diagonale`} text={`@ciment.paris`} />
+                <RecipeImageInsta imageUrl={'https://www.instagram.com/p/Bkhc5b5AmvH/'} title={`La double diagonale`} text={`@ciment.paris`} />
             </div>
 
 
