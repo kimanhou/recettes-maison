@@ -61,6 +61,10 @@ const RecipeFour : React.FC = props => {
             <div className={`step-separator`}></div>
             <div className={`step-title`}>4. La mise en pot</div>
             Mettre le tout dans un bocal.
+            <div className={`step-separator`}></div>
+            <div className={`step-title`}>5. La décoration</div>
+            Télécharger l'étiquette en cliquant <a href='./images/etiquette-beurre-cacahuetes.pdf' target='_blank'>ici</a>.<br></br>
+            Imprimer et coller sur le pot.
 
             <div className={`section-separator`}></div>
 

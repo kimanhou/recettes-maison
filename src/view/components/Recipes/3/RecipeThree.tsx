@@ -68,6 +68,10 @@ const RecipeThree : React.FC = props => {
             <div className={`step-separator`}></div>
             <div className={`step-title`}>4. La mise en pot</div>
             Verser dans le contenant d'un entonnoir si besoin.
+            <div className={`step-separator`}></div>
+            <div className={`step-title`}>5. La décoration</div>
+            Télécharger l'étiquette en cliquant <a href='./images/etiquette-lessive.pdf' target='_blank'>ici</a>.<br></br>
+            Imprimer et coller sur le pot.
 
             <div className={`section-separator`}></div>
 
