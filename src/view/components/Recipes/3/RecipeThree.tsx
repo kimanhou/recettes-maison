@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import ScreenDetector from '../../ScreenDetector/screenDetector';
 import ListItem from '../Template/ListItem/ListItem';
 import RecipeHighlight from '../Template/RecipeHighlight/RecipeHighlight';
+import RecipeImage from '../Template/RecipeImage/RecipeImage';
 import RecipeSectionTitle from '../Template/RecipeSectionTitle/RecipeSectionTitle';
 import RecipeTemplate, { getBackgroundColor } from '../Template/RecipeTemplate';
 import './RecipeThree.scss';
 
 
 const RecipeThree : React.FC = props => {
+    const image = require(`./images/hero-image.jpg`).default;
+
     const [materielActive, setMaterielActive] = useState(false);
     const materielOnActive = () => {
         setMaterielActive(true);
@@ -19,11 +22,6 @@ const RecipeThree : React.FC = props => {
 
     return (
         <RecipeTemplate recipeId={3} classname={`three`}>
-            {/* <RecipeSectionTitle title='En résumé' /> */}
-            
-            
-            {/* <div className={`section-separator`}></div> */}
-            
             <div className={`two-columns`}>
                 <div className={`column`}>
                     <RecipeSectionTitle title='Les ingrédients' />
@@ -47,11 +45,11 @@ const RecipeThree : React.FC = props => {
                 <div className={`column`}>
                     <RecipeSectionTitle title='Le matériel' />
                     <ScreenDetector className={`screen-detector-materiel`} onActive={materielOnActive} onUnactive={materielOnUnactive} />
-                    <ListItem text={`Une râpe`} dotColor={getBackgroundColor(1, 5)} active={materielActive}/>
-                    <ListItem text={`Une grande casserole`} dotColor={getBackgroundColor(2, 5)} active={materielActive}/>
-                    <ListItem text={`Une plaque chauffante`} dotColor={getBackgroundColor(3, 5)} active={materielActive}/>
-                    <ListItem text={`Un contenant`} dotColor={getBackgroundColor(4, 5)} active={materielActive}/>
-                    <ListItem text={`Un entonnoir (optionnel)`} dotColor={getBackgroundColor(5, 5)} active={materielActive}/>
+                    <ListItem text={`Une râpe`} dotColor={getBackgroundColor(0, 4)} active={materielActive}/>
+                    <ListItem text={`Une grande casserole`} dotColor={getBackgroundColor(1, 4)} active={materielActive}/>
+                    <ListItem text={`Une plaque chauffante`} dotColor={getBackgroundColor(2, 4)} active={materielActive}/>
+                    <ListItem text={`Un contenant`} dotColor={getBackgroundColor(3, 4)} active={materielActive}/>
+                    <ListItem text={`Un entonnoir (optionnel)`} dotColor={getBackgroundColor(4, 4)} active={materielActive}/>
                 </div>
             </div>
             
@@ -80,9 +78,9 @@ const RecipeThree : React.FC = props => {
 
             <div className={`section-separator`}></div>
 
-            <RecipeSectionTitle title='Les coûts' />
-            
-            <br></br>
+            <div className={`flex-column`}>
+                <RecipeImage imageUrl={image} title={`Ma lessive`} text={`maison`} />
+            </div>
 
             <div className={`section-separator`}></div>
         </RecipeTemplate>

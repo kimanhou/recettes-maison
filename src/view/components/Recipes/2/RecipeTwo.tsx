@@ -51,11 +51,11 @@ const RecipeTwo : React.FC = props => {
                 <div className={`column`}>
                     <RecipeSectionTitle title='Le matériel' />
                     <ScreenDetector className={`screen-detector-materiel`} onActive={materielOnActive} onUnactive={materielOnUnactive} />
-                    <ListItem text={`Une grande casserole pour le bain-marie`} dotColor={getBackgroundColor(1, 5)} active={materielActive}/>
-                    <ListItem text={`Une petite casserole ou un bécher muni d'un bec verseur`} dotColor={getBackgroundColor(2, 5)} active={materielActive}/>
-                    <ListItem text={`Une plaque chauffante`} dotColor={getBackgroundColor(3, 5)} active={materielActive}/>
-                    <ListItem text={`10 tubes pour baume à lèvres`} dotColor={getBackgroundColor(4, 5)} active={materielActive}/>
-                    <ListItem text={`Un entonnoir (optionnel)`} dotColor={getBackgroundColor(5, 5)} active={materielActive}/>
+                    <ListItem text={`Une grande casserole pour le bain-marie`} dotColor={getBackgroundColor(0, 4)} active={materielActive}/>
+                    <ListItem text={`Une petite casserole ou un bécher muni d'un bec verseur`} dotColor={getBackgroundColor(1, 4)} active={materielActive}/>
+                    <ListItem text={`Une plaque chauffante`} dotColor={getBackgroundColor(2, 4)} active={materielActive}/>
+                    <ListItem text={`10 tubes pour baume à lèvres`} dotColor={getBackgroundColor(3, 4)} active={materielActive}/>
+                    <ListItem text={`Un entonnoir (optionnel)`} dotColor={getBackgroundColor(4, 4)} active={materielActive}/>
                 </div>
             </div>
             

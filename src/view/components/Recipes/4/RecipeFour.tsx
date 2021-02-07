@@ -8,7 +8,7 @@ import './RecipeFour.scss';
 
 
 const RecipeFour : React.FC = props => {
-    const image = require(`./images/1.jpg`).default;
+    const image = require(`./images/hero-image.jpg`).default;
 
     const [materielActive, setMaterielActive] = useState(false);
     const materielOnActive = () => {
@@ -21,11 +21,6 @@ const RecipeFour : React.FC = props => {
 
     return (
         <RecipeTemplate recipeId={4} classname={`four`}>
-            {/* <RecipeSectionTitle title='En résumé' /> */}
-            
-            
-            {/* <div className={`section-separator`}></div> */}
-            
             <div className={`two-columns`}>
                 <div className={`column`}>
                     <RecipeSectionTitle title='Les ingrédients' />
@@ -45,9 +40,9 @@ const RecipeFour : React.FC = props => {
                 <div className={`column`}>
                     <RecipeSectionTitle title='Le matériel' />
                     <ScreenDetector className={`screen-detector-materiel`} onActive={materielOnActive} onUnactive={materielOnUnactive} />
-                    <ListItem text={`Un mixeur`} dotColor={getBackgroundColor(1, 5)} active={materielActive}/>
-                    <ListItem text={`Un bocal`} dotColor={getBackgroundColor(2, 5)} active={materielActive}/>
-                    <ListItem text={`Un four si les cacahuètes sont crues`} dotColor={getBackgroundColor(3, 5)} active={materielActive}/>
+                    <ListItem text={`Un mixeur`} dotColor={getBackgroundColor(0, 2)} active={materielActive}/>
+                    <ListItem text={`Un bocal`} dotColor={getBackgroundColor(1, 2)} active={materielActive}/>
+                    <ListItem text={`Un four si les cacahuètes sont crues`} dotColor={getBackgroundColor(2, 2)} active={materielActive}/>
                 </div>
             </div>
             
@@ -75,7 +70,7 @@ const RecipeFour : React.FC = props => {
             <div className={`section-separator`}></div>
 
             <div className={`flex-column`}>
-                <RecipeImage imageUrl={image} title={`Mon pot de beurre de cacahuètes`} text={`home made`} />
+                <RecipeImage imageUrl={image} title={`Mon beurre de cacahuètes`} text={`maison`} />
             </div>
         </RecipeTemplate>
     );

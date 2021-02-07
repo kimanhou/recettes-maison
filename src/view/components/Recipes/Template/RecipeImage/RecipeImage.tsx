@@ -11,7 +11,6 @@ const RecipeImage : React.FC<IRecipeImageProps> = props => {
 
     return (
         <div className={`recipe-image`} style={{ backgroundImage: `url('${props.imageUrl}')` }}>
-            <a href={props.imageUrl} target='_blank'>
                 <div className={`hover-shadow`}></div>
                 <div className={`recipe-image-content`}>
                     <div className={`recipe-image-title`}>
@@ -21,7 +20,6 @@ const RecipeImage : React.FC<IRecipeImageProps> = props => {
                         {props.text}
                     </div>
                 </div>
-            </a>
         </div>
     );
 }

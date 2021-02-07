@@ -64,16 +64,16 @@ const RecipeOne : React.FC = props => {
                 <div className={`column`}>
                     <RecipeSectionTitle title='Le matériel' />
                     <ScreenDetector className={`screen-detector-materiel`} onActive={materielOnActive} onUnactive={materielOnUnactive} />
-                    <ListItem text={`Un mixeur à main`} dotColor={getBackgroundColor(1, 10)} active={materielActive}/>
-                    <ListItem text={`Une boîte en carton ou moules en silicone 🥡`} dotColor={getBackgroundColor(2, 10)} active={materielActive}/>
-                    <ListItem text={`Une balance de cuisine`}dotColor={getBackgroundColor(3, 10)} active={materielActive} activeDelay={`0.2s`}/>
-                    <ListItem text={`2-3 Eco cups selon le nombre de couleurs différentes`}dotColor={getBackgroundColor(4, 10)} active={materielActive} activeDelay={`0.4s`}/>
-                    <ListItem text={`Un grand saladier ou une carafe`}dotColor={getBackgroundColor(5, 10)} active={materielActive} activeDelay={`0.6s`}/>
-                    <ListItem text={`Une spatule pour râcler`} dotColor={getBackgroundColor(6, 10)} active={materielActive} activeDelay={`0.8s`}/>
-                    <ListItem text={`Des bâtonnets pour touiller`} dotColor={getBackgroundColor(7, 10)} active={materielActive} activeDelay={`1s`}/>
-                    <ListItem text={`Des gants de ménage`} dotColor={getBackgroundColor(8, 10)} active={materielActive} activeDelay={`1.2s`}/>
-                    <ListItem text={`Une blouse`} dotColor={getBackgroundColor(9, 10)} active={materielActive} activeDelay={`1.4s`}/>
-                    <ListItem text={`Des lunettes de protection`} dotColor={getBackgroundColor(10, 10)} active={materielActive} activeDelay={`1.6s`}/>
+                    <ListItem text={`Un mixeur à main`} dotColor={getBackgroundColor(0, 9)} active={materielActive}/>
+                    <ListItem text={`Une boîte en carton ou moules en silicone 🥡`} dotColor={getBackgroundColor(1, 9)} active={materielActive}/>
+                    <ListItem text={`Une balance de cuisine`}dotColor={getBackgroundColor(2, 9)} active={materielActive} activeDelay={`0.2s`}/>
+                    <ListItem text={`2-3 Eco cups selon le nombre de couleurs différentes`}dotColor={getBackgroundColor(3, 9)} active={materielActive} activeDelay={`0.4s`}/>
+                    <ListItem text={`Un grand saladier ou une carafe`}dotColor={getBackgroundColor(4, 9)} active={materielActive} activeDelay={`0.6s`}/>
+                    <ListItem text={`Une spatule pour râcler`} dotColor={getBackgroundColor(5, 9)} active={materielActive} activeDelay={`0.8s`}/>
+                    <ListItem text={`Des bâtonnets pour touiller`} dotColor={getBackgroundColor(6, 9)} active={materielActive} activeDelay={`1s`}/>
+                    <ListItem text={`Des gants de ménage`} dotColor={getBackgroundColor(7, 9)} active={materielActive} activeDelay={`1.2s`}/>
+                    <ListItem text={`Une blouse`} dotColor={getBackgroundColor(8, 9)} active={materielActive} activeDelay={`1.4s`}/>
+                    <ListItem text={`Des lunettes de protection`} dotColor={getBackgroundColor(9, 9)} active={materielActive} activeDelay={`1.6s`}/>
                 </div>
             </div>
             
