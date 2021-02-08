@@ -79,6 +79,8 @@ const RecipeThree : React.FC = props => {
             <a href='https://www.bananapancakes.fr/reconnaitre-un-vrai-savon-de-marseille/' target='_blank'><RecipeHighlight>Banana Pancakes</RecipeHighlight></a> : comment reconnaître un vrai savon de Marseille
             <br></br><br></br>
             <a href='https://www.marius-fabre.com/fr/' target='_blank'><RecipeHighlight>Marius Fabre</RecipeHighlight></a> : fabricant de savon de Marseille
+            <br></br><br></br>
+            <a href='https://mescoursesenvrac.com/bicarbonate-de-soude-cristaux-de-soude-et-soude-caustique-quelles-differences-et-quels-usages/' target='_blank'><RecipeHighlight>Mes courses en vrac</RecipeHighlight></a> : bicarbonate de soude vs cristaux de soude
 
             <div className={`section-separator`}></div>
 
