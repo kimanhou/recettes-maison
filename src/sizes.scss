@@ -5,13 +5,29 @@
     --size-font-size-subtitle: 60px;
     --size-font-size-navigation: 18px;
     --size-font-size-small: 12px;
+    --size-font-size-recipe-section-title: 3rem;
 
     // MARGINS
     --size-main-margin: 70px;
     --size-gutter: 20px;
+    --size-margin-80: 80px;
+    --size-margin-60: 60px;
+    --size-margin-30: 30px;
+    --size-margin-20: 20px;
+    --size-margin-10: 10px;
+    --size-margin-5: 5px;
 
     // NAVIGATION
     --size-navigation-height: 24px;
+
+    // BLOG CATEGORIES
+    --size-blog-categories-max-width: 500px;
+
+    // MAIN WRAPPER
+    --size-main-wrapper-max-width: 1400px;
+    
+    // RECIPE IMAGE
+    --size-recipe-image-width: 400px;
 }
 
 @media screen and (max-width: 600px) {
@@ -20,6 +36,7 @@
         --size-font-size-header: 40px;
         --size-font-size-subtitle: 30px;
         --size-font-size-small: 8px;
+        --size-font-size-recipe-section-title: 2.5rem;
 
         // MARGINS
         --size-main-margin: 30px;

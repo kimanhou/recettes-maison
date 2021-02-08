@@ -1,20 +1,19 @@
-import React, { useContext, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Text from '../../../model/Text';
-import { LocalValueContext } from '../LocalisationContext/LocalContext';
 import ScreenDetector from '../ScreenDetector/screenDetector';
 import './NavigationLink.scss';
 
 interface INavigationLinkProps {
-    text : Text;
+    text : string;
     to : string;
     linkIndex : number;
+    isSelected : boolean;
+    backgroundColor ?: string;
 }
 
 const NavigationLink : React.FC<INavigationLinkProps> = props => {
-    var localisation = useContext(LocalValueContext);
-    const formatText = (text : Text) => {
-        return text.getText(localisation).split('').map((t, index) => {
+    const formatText = (text : string) => {
+        return text.split('').map((t, index) => {
             const delay = index * 0.1 + 1 + props.linkIndex ;
             return <span className={`down ${index}`} >
                         {t}
@@ -30,11 +29,19 @@ const NavigationLink : React.FC<INavigationLinkProps> = props => {
         }
     }
 
+    const backgroundColor = props.backgroundColor !== undefined ? props.backgroundColor : 'var(--color-charcoal)';
+
+    const isSelectedClassname = props.isSelected ? 'is-selected' : '';
+
     return (
-        <Link className={`navigation-link`} to={props.to} >
+        <Link className={`navigation-link ${isSelectedClassname}`} to={props.to} >
             <div className={`navigation-link-div`} ref={ref}>
                 {formatText(props.text)}
                 <ScreenDetector className={`screen-detector-navigation-link`} onActive={setAnimation} />
+            </div>
+            <div className={`navigation-link-underline`}>
+                <div className={`navigation-link-underline-half left`} style={{ backgroundColor: backgroundColor }}></div>
+                <div className={`navigation-link-underline-half right`} style={{ backgroundColor: backgroundColor }}></div>
             </div>
         </Link>
     );

@@ -1,0 +1,25 @@
+.recipe-template {
+    &.one {
+        .motifs-container {
+            margin-top: var(--size-margin-30);
+        }
+        .ingredients{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .recipe-template {
+        &.one {
+            .motifs-container {
+                flex-direction: column;
+                >.recipe-image {
+                    width: calc(100vw - var(--size-main-margin) * 2);
+                    height: calc(100vw - var(--size-main-margin) * 2);
+                }
+            }
+        }
+    }
+}

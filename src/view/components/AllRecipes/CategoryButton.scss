@@ -1,0 +1,67 @@
+.category-button {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.4s, background-color 0.4s;
+    margin: 0 var(--size-margin-10);
+    padding: var(--size-margin-10);
+    >.abs-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    >.category-button-description {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+    }
+    .path {
+        fill-opacity: 0;
+        transition: fill-opacity 0.4s;
+    }
+    &:hover {
+        &.apricot {
+            color: var(--color-grey);
+        }
+        &.light-grey, &.grey, &.charcoal {
+            color: var(--color-white);
+        }
+        .path {
+            fill-opacity: 1;
+        }
+    }
+    &.is-selected {
+        &.apricot {
+            color: var(--color-grey);
+        }
+        &.light-grey, &.grey, &.charcoal {
+            color: var(--color-white);
+        }
+        .path {
+            fill-opacity: 1;
+        }
+    }
+    &.apricot {
+        .path {
+            fill: var(--color-apricot);
+        }
+    }
+    &.light-grey {
+        .path {
+            fill: var(--color-light-grey);
+        }
+    }
+    &.grey {
+        .path {
+            fill: var(--color-grey);
+        }
+    }
+    &.charcoal {
+        .path {
+            fill: var(--color-charcoal);
+        }
+    }
+}

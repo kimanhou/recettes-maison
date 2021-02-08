@@ -7,7 +7,7 @@ const Home : React.FC = props => {
     return (
         <div className={`home`}>
             <Header />
-            <Navigation />
+            <Navigation selectedPage='' />
         </div>
     );
 }

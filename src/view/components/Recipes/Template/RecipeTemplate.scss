@@ -1,0 +1,75 @@
+.recipe-template {
+    line-height: 1.5;
+    >.main-wrapper {
+        .section-title {
+            font-family: PlayfairSC;
+            font-size: 2rem;
+            margin-bottom: var(--size-margin-10);
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+        }
+        .section-separator {
+            height: 3rem;
+        }
+        .step-title {
+            font-family: PlayfairSC;
+            font-size: 1.5rem;
+            margin-bottom: var(--size-margin-5);
+            color: var(--color-grey);
+        }
+        .step-separator {
+            height: 1.5rem;
+        }
+        .two-columns {
+            display: flex;
+            flex-direction: row;
+            margin: 0 calc(var(--size-margin-20) * (-1));
+            >.column {
+                flex: 1;
+                margin: 0 var(--size-margin-20);
+            }
+        }
+        .ingredients {
+            display: flex;
+            flex: row;
+            font-style: bold;
+            border: solid 1px var(--color-apricot);
+            border-radius: var(--size-margin-10);
+            padding: var(--size-margin-10);
+            >.ingredients-column {
+                margin-right: var(--size-margin-10);
+            }
+        }
+        a {
+            &:hover {
+                color: var(--color-grey);
+            }
+        }
+        .flex-line {
+            display: flex;
+            flex-direction: row;
+        }
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .uppercase {
+            text-transform: uppercase;
+            font-style: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .recipe-template {
+        >.main-wrapper {
+            .two-columns {
+                flex-direction: column;
+                >.column:first-child {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}
