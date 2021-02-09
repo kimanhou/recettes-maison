@@ -1,0 +1,12 @@
+.recipe-template {
+    &.five {
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .recipe-template {
+        &.five {
+        }
+    }
+}

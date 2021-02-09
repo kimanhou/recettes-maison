@@ -3,6 +3,7 @@ import RecipeOne from "../view/components/Recipes/1/RecipeOne";
 import RecipeTwo from "../view/components/Recipes/2/RecipeTwo";
 import RecipeThree from "../view/components/Recipes/3/RecipeThree";
 import RecipeFour from "../view/components/Recipes/4/RecipeFour";
+import RecipeFive from "../view/components/Recipes/5/RecipeFive";
 import Category from "./Category";
 
 export interface IRecipeContentProps{
@@ -36,7 +37,7 @@ export default class Recipe {
             Recipe.TWO,
             Recipe.THREE,
             Recipe.FOUR,
-            // Recipe.ONE,
+            Recipe.FIVE,
             // Recipe.THREE,
             // Recipe.ONE,
             // Recipe.THREE,
@@ -97,6 +98,7 @@ export default class Recipe {
     static TWO = new Recipe(2, new Date('2021-02-10'), 'Baume à lèvres', RecipeTwo, Category.HYGIENE);
     static THREE = new Recipe(3, new Date('2021-02-17'), 'Lessive', RecipeThree, Category.CLEANING);
     static FOUR = new Recipe(4, new Date('2021-02-24'), 'Beurre de cacahuètes', RecipeFour, Category.FOOD);
+    static FIVE = new Recipe(5, new Date('2021-03-03'), 'Liquide vaisselle', RecipeFive, Category.CLEANING);
 }
 
 const months = [ 'Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc' ];
