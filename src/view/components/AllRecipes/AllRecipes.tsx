@@ -5,6 +5,7 @@ import Category from '../../../model/Category';
 import Recipe from '../../../model/Recipe';
 import { useQueryParams } from '../../hooks/UseQueryParams';
 import FadeIn from '../FadeIn/FadeIn';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
 import RecipePreview from '../RecipePreview/RecipePreview';
@@ -14,7 +15,7 @@ import CategoryButton from './CategoryButton';
 const AllRecipes : React.FC = props => {
     const queryParams = useQueryParams();
     let categoriesString = queryParams['categories'];
-    let categories : Category[] = [];
+    let categories : Category[] = [Category.ALL];
     if (categoriesString !== undefined) {
         categories = (JSON.parse(categoriesString) as string[]).map(Category.deserialize);
     }
@@ -28,7 +29,7 @@ const AllRecipes : React.FC = props => {
     const location = useLocation();
     const setSelectedCategories = (categories : Category[]) => {
         const {categories : tagsParams, ...otherQueryParams} = queryParams;
-        const search = Object.keys(otherQueryParams).map(key => `${key}=${encodeURIComponent(queryParams[key]!)}`);
+        const search = Object.keys(otherQueryParams).map(key => `${key}=${encodeURIComponent(queryParams[key]!)}`).join("&");
         history.push(`${location.pathname}?${Category.toQueryParam(categories)}${search}`)
     }
 
@@ -94,6 +95,7 @@ const AllRecipes : React.FC = props => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

@@ -21,7 +21,8 @@ const App : React.FunctionComponent = props => {
                     <Contact />
                 </Route>
                 <Route exact path={["/"]}>
-                    <Home />
+                    {/* <Home /> */}
+                    <AllRecipes />
                 </Route>
                 <Route exact path={["/recipes/"]}>
                     <AllRecipes />
