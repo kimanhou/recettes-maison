@@ -1,5 +1,6 @@
 import React from 'react';
 import Recipe from '../../../../model/Recipe';
+import Footer from '../../Footer/Footer';
 import Navigation from '../../Navigation/Navigation';
 import ArrowBack from './ArrowBack/ArrowBack';
 import ArrowUp from './ArrowUp/ArrowUp';
@@ -33,6 +34,7 @@ const RecipeTemplate : React.FC<IRecipeTemplateProps> = props => {
                 {props.children}
                 <ArrowUp />
             </div>
+            <Footer />
         </div>
     );
 }
