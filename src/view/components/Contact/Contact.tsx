@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
 import './Contact.scss';
@@ -13,6 +14,7 @@ const Contact : React.FC = props => {
                     Contact
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

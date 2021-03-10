@@ -5,10 +5,10 @@ import RecipeHighlight from '../Template/RecipeHighlight/RecipeHighlight';
 import RecipeImage from '../Template/RecipeImage/RecipeImage';
 import RecipeSectionTitle from '../Template/RecipeSectionTitle/RecipeSectionTitle';
 import RecipeTemplate, { getBackgroundColor } from '../Template/RecipeTemplate';
-import './RecipeThree.scss';
+import './RecipeFive.scss';
 
 
-const RecipeThree : React.FC = props => {
+const RecipeFive : React.FC = props => {
     const image = require(`./images/hero-image.jpg`).default;
 
     const [materielActive, setMaterielActive] = useState(false);
@@ -21,32 +21,27 @@ const RecipeThree : React.FC = props => {
     }
 
     return (
-        <RecipeTemplate recipeId={3} classname={`three`}>
-            <RecipeSectionTitle title='En résumé' />
-            La lessive est le produit du quotidien <RecipeHighlight>le plus simple</RecipeHighlight> à faire soi-même. Elle est également très peu coûteuse et les ingrédients sont facilement trouvables en grande surface, ce qui fait de cette recette la plus accessible pour les débutants.<br></br>
-            La préparation est extrêmement rapide et ne présente aucune difficulté.
-            <br></br>
-            <br></br>
-            Temps de préparation : 20 min + refroidissement
-            
-            <div className={`section-separator`}></div>
-            
+        <RecipeTemplate recipeId={5} classname={`five`}>
             <div className={`two-columns`}>
                 <div className={`column`}>
                     <RecipeSectionTitle title='Les ingrédients' />
                     <div className={`ingredients`}>
                         <div className={`ingredients-column`}>
-                            20g<br></br>
-                            20g<br></br>
-                            1L<br></br>
-                            1 cuillère à café<br></br>
-                            10 gouttes
+                            50g<br></br>
+                            1 cuillère à soupe<br></br>
+                            0.8L<br></br>
+                            1 cuillère à soupe<br></br>
+                            1 cuillère à soupe<br></br>
+                            1 cuillère à soupe<br></br>
+                            Quelques gouttes
                         </div>
                         <div className={`ingredients-column`}>
                             Savon de Marseille<br></br>
                             Savon noir liquide<br></br>
-                            Eau 💦<br></br>
+                            Eau bouillante 💦<br></br>
                             Cristaux de soude<br></br>
+                            Bicarbonate de soude<br></br>
+                            Vinaigre d'alcool (optionnel)<br></br>
                             Huile essentielle (optionnel)
                         </div>
                     </div>
@@ -69,18 +64,21 @@ const RecipeThree : React.FC = props => {
             Râper le savon de Marseille en copeaux. 
             <div className={`step-separator`}></div>
             <div className={`step-title`}>2. Le chauffage</div>
-            Mélanger tous les ingrédients, sauf l'huile essentielle, et faire chauffer.<br></br>
-            Bien mélanger et laisser refroidir.
+            Mélanger le savon de Marseille en copeaux et le savon noir dans l'eau bouillante.<br></br>
+            Bien mélanger.
             <div className={`step-separator`}></div>
-            <div className={`step-title`}>3. L'ajout d'huile essentielle (optionnel)</div>
-            Ajouter l'huile essentielle.
+            <div className={`step-title`}>3. L'ajout des bases</div>
+            Une fois le mélange bien homogène, ajouter le bicarbonate de soude, le vinaigre d'alcool et les cristaux de soude.<br></br>
+            Attention, ça mousse.
             <div className={`step-separator`}></div>
-            <div className={`step-title`}>4. La mise en pot</div>
-            Verser dans le contenant d'un entonnoir si besoin.
+            <div className={`step-title`}>4. Le refroidissement</div>
+            Laisser refroidir en mélangeant énergiquement. Ajouter l'huile essentielle durant cette phase.<br></br>
+            Afin d'éviter que le produit final ne soit compact, il faut bien remuer durant toute la phase de refroidissement. Passer au mixeur si besoin.<br></br>
+            Verser le produit final dans son contenant.
             <div className={`step-separator`}></div>
             <div className={`step-title`}>5. La décoration</div>
-            Télécharger l'étiquette en cliquant <a href='./images/etiquette-lessive.pdf' target='_blank'>ici</a>.<br></br>
-            Imprimer et coller sur le pot.
+            Télécharger l'étiquette en cliquant <a href='./images/etiquette-liquide-vaisselle.pdf' target='_blank'>ici</a>.<br></br>
+            Imprimer et coller sur le contenant.
 
             <div className={`section-separator`}></div>
 
@@ -94,11 +92,12 @@ const RecipeThree : React.FC = props => {
             <div className={`section-separator`}></div>
 
             <RecipeSectionTitle title='Les coûts' />
-            Savon de Marseille Marius Fabre 400g 3,50€ (ou 200g pour 3€) à la pharmacie de Tolbiac, soit 0,35€ pour 1L de lessive<br></br>
-            Savon noir liquide Marius Fabre 250mL 4€ à la pharmacie de Tolbiac, soit 0,40€ pour 1L de lessive<br></br>
+            Savon de Marseille Marius Fabre 400g 3,50€ à la pharmacie de Tolbiac, soit 0,44€ pour cette recette<br></br>
+            Savon noir liquide Marius Fabre 250mL 4€ à la pharmacie de Tolbiac, soit 0,24€ pour cette recette<br></br>
             Il est possible de trouver moins cher en grande surface, ces produits se trouvent au rayon lessive, et non savon.<br></br><br></br>
-            Cristaux de soude 500g pour 2,75€ en grande surface, soit environ 0,03€ pour 1L de lessive<br></br><br></br>
-            <RecipeHighlight>Total : moins d'1€ / L de lessive</RecipeHighlight>
+            Cristaux de soude 500g pour 2,75€ en grande surface, soit environ 0,03€ pour cette recette<br></br>
+            Bicarbonate de soude 500g pour 3€ en grande surface, soit 0,03€ pour cette recette<br></br><br></br>
+            <RecipeHighlight>Total : moins d'1€ / 0.8L de liquide vaisselle</RecipeHighlight>
 
             <div className={`section-separator`}></div>
 
@@ -112,4 +111,4 @@ const RecipeThree : React.FC = props => {
     );
 }
 
-export default RecipeThree;
+export default RecipeFive;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Recipe from '../../../../model/Recipe';
+import Footer from '../../Footer/Footer';
 import Navigation from '../../Navigation/Navigation';
 import ArrowBack from './ArrowBack/ArrowBack';
 import ArrowUp from './ArrowUp/ArrowUp';
@@ -14,7 +15,7 @@ interface IRecipeTemplateProps {
 // --color-white: rgb(251, 251, 251);
 // --color-charcoal: rgb(54, 63, 73);
 const calculateValueOfBackgroundColor = (from : number, to : number, distance : number, distanceTotale : number) => {
-    return from + (to - from) * (distance / distanceTotale);
+    return Math.floor(from + (to - from) * (distance / distanceTotale));
 }
 
 export const getBackgroundColor = (distance : number, distanceTotale : number) => {
@@ -33,6 +34,7 @@ const RecipeTemplate : React.FC<IRecipeTemplateProps> = props => {
                 {props.children}
                 <ArrowUp />
             </div>
+            <Footer />
         </div>
     );
 }

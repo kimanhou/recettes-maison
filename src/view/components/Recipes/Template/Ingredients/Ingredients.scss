@@ -1,0 +1,13 @@
+.ingredients-container {
+    >.ingredients {
+        display: flex;
+        flex: row;
+        font-style: bold;
+        border: solid 1px var(--color-apricot);
+        border-radius: var(--size-margin-10);
+        padding: var(--size-margin-10);
+        >.ingredients-column {
+            margin-right: var(--size-margin-10);
+        }
+    }
+}

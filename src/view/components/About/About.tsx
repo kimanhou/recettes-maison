@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
 import './About.scss';
@@ -13,6 +14,7 @@ const About : React.FC = props => {
                     À propos
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

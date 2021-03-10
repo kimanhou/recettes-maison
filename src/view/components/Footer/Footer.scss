@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    padding: var(--size-margin-10) var(--size-margin-20);
+    line-height: 2rem;
+    justify-content: center;
+    >.recettes {
+        font-family: PlayfairSC;
+    }
+    >.by-maki {
+        font-family: Dawning;
+        margin-left: var(--size-margin-5);
+    }
+    >.year {
+        margin-left: var(--size-margin-5);
+    }
+}
