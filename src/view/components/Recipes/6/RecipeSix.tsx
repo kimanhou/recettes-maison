@@ -7,6 +7,7 @@ import RecipeHighlight from '../Template/RecipeHighlight/RecipeHighlight';
 import RecipeImage from '../Template/RecipeImage/RecipeImage';
 import RecipeSectionTitle from '../Template/RecipeSectionTitle/RecipeSectionTitle';
 import RecipeTemplate, { getBackgroundColor } from '../Template/RecipeTemplate';
+import Ustensils from '../Template/Ustensils/Ustensils';
 import './RecipeSix.scss';
 
 
@@ -36,20 +37,13 @@ const RecipeSix : React.FC = props => {
                                         {quantity: '60g', ingredientName: 'Chocolat noir (à rajouter en dernier)'}
                                     ];
 
+    const ustensils = [ `Une spatule`, `Une grande poêle`, `Une petite casserole`, `Un saladier`, `Un moule à brownie`, `Papier sulfurisé` ];
+
     return (
         <RecipeTemplate recipeId={6} classname={`six`}>
             <div className={`two-columns`}>
                 <Ingredients ingredients={ingredients}/>
-                <div className={`column`}>
-                    <RecipeSectionTitle title='Le matériel' />
-                    <ScreenDetector className={`screen-detector-materiel`} onActive={materielOnActive} onUnactive={materielOnUnactive} />
-                    <ListItem text={`Une spatule`} dotColor={getBackgroundColor(0, 5)} active={materielActive}/>
-                    <ListItem text={`Une grande poêle`} dotColor={getBackgroundColor(1, 5)} active={materielActive}/>
-                    <ListItem text={`Une petite casserole`} dotColor={getBackgroundColor(2, 5)} active={materielActive}/>
-                    <ListItem text={`Un saladier`} dotColor={getBackgroundColor(3, 5)} active={materielActive}/>
-                    <ListItem text={`Un moule à brownie`} dotColor={getBackgroundColor(4, 5)} active={materielActive}/>
-                    <ListItem text={`Papier sulfurisé`} dotColor={getBackgroundColor(5, 5)} active={materielActive}/>
-                </div>
+                <Ustensils ustensils={ustensils} materielActive={materielActive} materielOnActive={materielOnActive} materielOnUnactive={materielOnUnactive}/>
             </div>
             
             <div className={`section-separator`}></div>
