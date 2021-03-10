@@ -25,6 +25,9 @@ const RecipeThree : React.FC = props => {
             <RecipeSectionTitle title='En résumé' />
             La lessive est le produit du quotidien <RecipeHighlight>le plus simple</RecipeHighlight> à faire soi-même. Elle est également très peu coûteuse et les ingrédients sont facilement trouvables en grande surface, ce qui fait de cette recette la plus accessible pour les débutants.<br></br>
             La préparation est extrêmement rapide et ne présente aucune difficulté.
+            <br></br>
+            <br></br>
+            Temps de préparation : 20 min + refroidissement
             
             <div className={`section-separator`}></div>
             

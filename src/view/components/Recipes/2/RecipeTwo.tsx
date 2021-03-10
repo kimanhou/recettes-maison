@@ -39,7 +39,7 @@ const RecipeTwo : React.FC = props => {
                         </div>
                         <div className={`ingredients-column`}>
                             Cire d'abeille &#128029;<br></br>
-                            Karité<br></br>
+                            Beurre de karité<br></br>
                             Huile de noisette<br></br>
                             Huile de coco &#129381;<br></br>
                             Huile de macadamia<br></br>
@@ -80,6 +80,7 @@ const RecipeTwo : React.FC = props => {
             <RecipeSectionTitle title='Les coûts' />
             Huile de coco désodorisée 13,60€ / L chez <a href='https://www.naturalia.fr/huile-de-coco-desodorisee-50cl' target='_blank'>Naturalia</a><br></br>
             <br></br>
+            Beurre de karité 22,50€ / L chez <a href='https://www.aroma-zone.com/info/fiche-technique/beurre-vegetal-karite-bio-aroma-zone?page=library' target='_blank'>Aroma zone</a> ou 4€ / 100 mL soit 0,80€ pour cette recette
 
             <div className={`section-separator`}></div>
         </RecipeTemplate>
