@@ -78,10 +78,15 @@ const RecipeTwo : React.FC = props => {
             <div className={`section-separator`}></div>
 
             <RecipeSectionTitle title='Les coûts' />
-            Huile de coco désodorisée 13,60€ / L chez <a href='https://www.naturalia.fr/huile-de-coco-desodorisee-50cl' target='_blank'>Naturalia</a><br></br>
-            <br></br>
-            Beurre de karité 22,50€ / L chez <a href='https://www.aroma-zone.com/info/fiche-technique/beurre-vegetal-karite-bio-aroma-zone?page=library' target='_blank'>Aroma zone</a> ou 4€ / 100 mL soit 0,80€ pour cette recette
+            Cire d'abeille 80€ / kg en pharmacie, soit <RecipeHighlight>2,40€</RecipeHighlight> pour cette recette
+            Huile de coco désodorisée 13,60€ / L chez <a href='https://www.naturalia.fr/huile-de-coco-desodorisee-50cl' target='_blank'>Naturalia</a> ou <RecipeHighlight>1,20€ / 10 mL</RecipeHighlight> chez <a href='https://www.aroma-zone.com/info/fiche-technique/huile-vegetale-coco-bio-aroma-zone' target='_blank'>Aroma zone</a><br></br>
+            Beurre de karité 22,50€ / L chez <a href='https://www.aroma-zone.com/info/fiche-technique/beurre-vegetal-karite-bio-aroma-zone?page=library' target='_blank'>Aroma zone</a> ou 4€ / 100 mL soit <RecipeHighlight>0,80€</RecipeHighlight> pour cette recette<br></br>
+            Huile de ricin bio <RecipeHighlight>0,75€ / 10 mL</RecipeHighlight> chez <a href='https://www.aroma-zone.com/info/fiche-technique/huile-vegetale-ricin-bio-aroma-zone' target='_blank' rel='noopener'>Aroma Zone</a><br></br>
+            Huile de macadamia bio <RecipeHighlight>1,25€ / 10 mL</RecipeHighlight> chez <a href='https://www.aroma-zone.com/info/fiche-technique/huile-vegetale-macadamia-bio-aroma-zone' target='_blank' rel='noopener'>Aroma Zone</a><br></br>
+            Huile de noisette bio <RecipeHighlight>1,25€ / 10 mL</RecipeHighlight> chez <a href='https://www.aroma-zone.com/info/fiche-technique/huile-vegetale-noisette-bio-aroma-zone' target='_blank' rel='noopener'>Aroma Zone</a><br></br>
 
+            <br></br>
+            <RecipeHighlight>Total : 7,35€ pour 10 tubes de baume à lèvres</RecipeHighlight>
             <div className={`section-separator`}></div>
         </RecipeTemplate>
     );
